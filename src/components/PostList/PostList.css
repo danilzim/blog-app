@@ -1,0 +1,6 @@
+.another-post-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+    width: 100%;
+}
