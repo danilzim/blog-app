@@ -41,7 +41,7 @@ const AnotherPosts = ({ post }: ItemPosts) => {
                 alt="none"
               ></img>
             </button>
-            <span>{likes}</span>
+            <span className="likes-number">{likes}</span>
             <button className="button__dislikes" onClick={incrementDislikes}>
               <img
                 className="icon__likes"
@@ -49,7 +49,7 @@ const AnotherPosts = ({ post }: ItemPosts) => {
                 alt="none"
               ></img>
             </button>
-            <span>{dislikes}</span>
+            <span className="likes-number">{dislikes}</span>
           </div>
           <button
             className="button"

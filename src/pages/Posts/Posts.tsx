@@ -2,17 +2,10 @@ import "../../App.css";
 import { useEffect, useState } from "react";
 import { useDebounce } from "../../hooks/useDebounce";
 import { IPost } from "../../type/type";
-import { URL } from "../../utils/const";
 import PostList from "../../components/PostList/PostList";
+import { fetchPosts } from "../../api/fetchPosts";
+import React from "react";
 
-async function fetchPosts(search: string) {
-  const qp = search ? `?title=${search}` : "";
-  const url = `${URL}${qp}`;
-  const response = await fetch(url);
-  const posts = await response.json();
-
-  return posts;
-}
 
 function Posts() {
   const [posts, setPosts] = useState<IPost[]>([]);
@@ -34,7 +27,7 @@ function Posts() {
       <input
         className="input"
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
         type="text"
         placeholder="Поиск по названию статьи"
       ></input>
