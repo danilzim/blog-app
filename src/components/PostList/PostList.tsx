@@ -1,4 +1,4 @@
-import "./PostList.css"
+import styles from "./PostList.module.css"
 import {IPost} from "../../type/type";
 import FirstPost from "../FirstPost/FirstPost";
 import AnotherPosts from "../AnotherPosts/AnotherPosts";
@@ -15,7 +15,7 @@ const PostList = ({posts}: IPostList) => {
                     <FirstPost post={post} key={post.id}/>
                 ) : null
             )}
-            <div className='another-post-wrapper'>
+            <div className={styles.wrapper}>
                 {posts.map((post, index) =>
                     index === 0 ? null : <AnotherPosts post={post} key={post.id}/>
                 )}

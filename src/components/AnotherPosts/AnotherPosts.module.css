@@ -1,0 +1,54 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    max-width: 558px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+@media (max-width: 776px) {
+    .post {
+        width: 100%;
+    }
+}
+
+.content {
+    padding: 10px;
+}
+
+.img {
+    width: 100%;
+}
+
+.number {
+    margin-left: 4px;
+}
+
+.button__likes, .button__dislikes {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon__likes {
+    width: 18px;
+    height: 18px;
+}
+
+.button {
+    background: transparent;
+    border: 2px solid grey;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}

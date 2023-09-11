@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./AnotherPosts.css";
+import styles from "./AnotherPosts.module.css";
 import { getRandomNumber } from "../../functions/gerRandomNumber";
 import { IPost } from "../../type/type";
 
@@ -22,37 +22,37 @@ const AnotherPosts = ({ post }: ItemPosts) => {
   }
 
   return (
-    <div className="another-post">
+    <div className={styles.post}>
       <div>
         <img
-          className="img-another-post"
+          className={styles.img}
           src="https://placehold.co/558x280"
           alt="post"
         />
       </div>
-      <div className="container-another-content">
-        <h2 className="another-post__title">{post.title}</h2>
-        <div className="another-post__footer">
+      <div className={styles.content}>
+        <h2 className={styles.title}>{post.title}</h2>
+        <div className={styles.footer}>
           <div>
-            <button className="button__likes" onClick={incrementLikes}>
+            <button className={styles.button__likes} onClick={incrementLikes}>
               <img
-                className="icon__likes"
+                className={styles.icon__likes}
                 src="/icons/like.svg"
                 alt="none"
               ></img>
             </button>
-            <span className="likes-number">{likes}</span>
-            <button className="button__dislikes" onClick={incrementDislikes}>
+            <span className={styles.number}>{likes}</span>
+            <button className={styles.button__dislikes} onClick={incrementDislikes}>
               <img
-                className="icon__likes"
+                className={styles.icon__likes}
                 src="/icons/dislike.svg"
                 alt="none"
               ></img>
             </button>
-            <span className="likes-number">{dislikes}</span>
+            <span className={styles.number}>{dislikes}</span>
           </div>
           <button
-            className="button"
+            className={styles.button}
             onClick={() => router(`/posts/${post.id}`)}
           >
             Читать далее

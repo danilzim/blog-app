@@ -1,4 +1,4 @@
-import "../../App.css";
+import styles from "./Posts.module.css";
 import { useEffect, useState } from "react";
 import { useDebounce } from "../../hooks/useDebounce";
 import { IPost } from "../../type/type";
@@ -19,8 +19,8 @@ function Posts() {
 
   return (
     <div className="container-posts-page">
-      <h1 className="title">Блог</h1>
-      <div className="description">
+      <h1 className={styles.title}>Блог</h1>
+      <div className={styles.description}>
         Здесь мы делимся интересными кейсами из наших проектов, пишем про IT, а
         также переводим зарубежные статьи
       </div>

@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { URL } from "../../utils/const";
 import { IPost } from "../../type/type";
-import "./PostIdPages.css";
+import styles from "./PostIdPages.module.css";
 import { getRandomNumber } from "../../functions/gerRandomNumber";
 
 const PostIdPages: React.FC = () => {
@@ -33,22 +33,22 @@ const PostIdPages: React.FC = () => {
   return (
     <div>
       <div>
-        <div className="post-pages-header">
+        <div className={styles.header}>
           <div>
-            <Link className="link" to={"/"}>Вернуться к статьям</Link>
+            <Link className={styles.limk} to={"/"}>Вернуться к статьям</Link>
           </div>
           <div>
-            <button className="button__likes" onClick={incrementLikes}>
+            <button className={styles.button__likes} onClick={incrementLikes}>
               <img
-                className="icon__likes"
+                className={styles.icon__likes}
                 src="/icons/like.svg"
                 alt="none"
               ></img>
             </button>
             <span>{likes}</span>
-            <button className="button__dislikes" onClick={incrementDislikes}>
+            <button className={styles.button__dislikes} onClick={incrementDislikes}>
               <img
-                className="icon__likes"
+                className={styles.icon__likes}
                 src="/icons/dislike.svg"
                 alt="none"
               ></img>
@@ -56,11 +56,11 @@ const PostIdPages: React.FC = () => {
             <span>{dislikes}</span>
           </div>
         </div>
-        <h1 className="post-pages-title">{post?.title}</h1>
-        <div className="post-pages-body">
-          <div className="image-wrapper">
+        <h1 className={styles.title}>{post?.title}</h1>
+        <div className={styles.body}>
+          <div className={styles.img__wrapper}>
             <img
-              className="post-pages-img"
+              className={styles.img}
               src="https://placehold.co/600x400"
               alt="post"
             />

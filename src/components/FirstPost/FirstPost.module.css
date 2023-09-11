@@ -1,4 +1,4 @@
-.first-post {
+.post {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -9,17 +9,17 @@
     overflow: hidden;
 }
 
-.first-post__img {
+.img__wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.img-first-post {
+.img {
     width: 100%;
 }
 
-.first-post__header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,7 @@
     cursor: pointer;
 }
 
-.likes-number {
+.number {
     margin-left: 4px;
 }
 
@@ -50,13 +50,13 @@
     height: 18px;
 }
 
-.first-post-content {
+.content {
     display: flex;
     flex-direction: column;
     padding: 0 10px 10px 10px;
 }
 
-.first-post__footer {
+.footer {
     display: flex;
     justify-content: end;
 }

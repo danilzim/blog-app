@@ -1,4 +1,4 @@
-import "./FirstPost.css";
+import styles from "./FirstPost.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getRandomNumber } from "../../functions/gerRandomNumber";
@@ -22,40 +22,40 @@ const FirstPost = ({ post }: PostItemProps) => {
   }
 
   return (
-    <div className="first-post">
-      <div className="first-post__img">
+    <div className={styles.post}>
+      <div className={styles.img__wrapper}>
         <img
-          className="img-first-post"
+          className={styles.img}
           src="https://placehold.co/600x400"
           alt="post"
         />
       </div>
-      <div className="first-post-content">
-        <div className="first-post__header">
-          <h2 className="first-post__title">{post.title}</h2>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>{post.title}</h2>
           <div>
-            <button className="button__likes" onClick={incrementLikes}>
+            <button className={styles.button__likes} onClick={incrementLikes}>
               <img
-                className="icon__likes"
+                className={styles.icon__likes}
                 src="/icons/like.svg"
                 alt="none"
               ></img>
             </button>
-            <span className="likes-number">{likes}</span>
-            <button className="button__dislikes" onClick={incrementDislikes}>
+            <span className={styles.number}>{likes}</span>
+            <button className={styles.button__dislikes} onClick={incrementDislikes}>
               <img
-                className="icon__likes"
+                className={styles.icon__likes}
                 src="/icons/dislike.svg"
                 alt="none"
               ></img>
             </button>
-            <span className="likes-number">{dislikes}</span>
+            <span className={styles.number}>{dislikes}</span>
           </div>
         </div>
-        <div className="first-post__body">{post.body}</div>
-        <div className="first-post__footer">
+        <div className={styles.body}>{post.body}</div>
+        <div className={styles.footer}>
           <button
-            className="button"
+            className={styles.button}
             onClick={() => router(`/posts/${post.id}`)}
           >
             Читать далее
